@@ -1,38 +1,43 @@
 Algoritmo ejercio_2_for
 	definir set_usuario_nuevo como texto;
 	set_usuario_nuevo = "ing usuario";
-	definir set_contraseña_nueva como real;
+	definir set_contrasenia como real;
 	set_contraseña_nueva = 0;
 	
-	definir su_usuario como texto;
-	su_usuario= "ing su us";
-	definir su_Contrasenia como real;
-	su_contrasenia = 0;
+	definir usuario_ingresado como texto;
+	usuario_ingresado = "ing su us";
+	definir contrasenia_ingresada como real;
+	contrasenia_ingresada = 0;
+	
+	definir CANT_INTENTOS_MAX Como Entero;
+	CANT_INTENTOS_MAX = 5;
 	
 	escribir "Ingrese su nombre de usuario para registrarlo:";
 	Leer  set_usuario_nuevo;
 	escribir "Ingrese la contraseña deseada para registrarla, solo numeros:";
-	Leer set_contraseña_nueva;
+	Leer set_contrasenia;
 	escribir " ";
 	escribir " ";
 	escribir " ";
 	escribir " ";
 	escribir " ";
 	
-	escribir "ingrese su usuario para iniciar secion:";
-	Leer su_usuario;
-	escribir "ingrese su contraseña para iniciar seción:";
-	Leer su_contrasenia;
 	
-	
-	Si (set_usuario_nuevo == su_usuario) y (set_contraseña_nueva == su_contrasenia) Entonces
-		escribir "Buenvenido!! :) ";
-	SiNo
-		escribir "COntraseña y/o Usuario incorrectos"
-		Escribir "Favor intente nuevamente"
+	Para iterador = 1 Hasta 5 Con Paso 1 Hacer
+		escribir "ingrese su usuario para iniciar secion:";
+		Leer usuario_ingresado;
+		escribir "ingrese su contraseña para iniciar seción:";
+		Leer contrasenia_ingresada;
+		Si (usuario_ingresado == set_usuario_nuevo) y (contrasenia_ingresada = set_contrasenia )Entonces
+			escribir "Bienvenido!! :) ";
+			iterador = 5;
+		SiNo
+			escribir "Usuario y/o contraseña ingresados incorrectos :( ";
+			escribir "Intentos restantes: " CANT_INTENTOS_MAX - iterador;
+		Fin Si
 		
 		
-	Fin Si
+	Fin para
 	
 	
 FinAlgoritmo
