@@ -12,7 +12,7 @@ Algoritmo ejercicio_en_clase_for
 	gatos_comieron_ahora = 0;
 	definir gato_o_gatos como texto;
 	gato_o_gatos = "gato";
-		
+	
 	escribir MSJ_INICIAL_CANT_GATOS;
 	Leer cantidad_gatos;
 	escribir MSJ_CUANTOS_ALIMENTO_A_LA_VEZ
@@ -21,11 +21,9 @@ Algoritmo ejercicio_en_clase_for
 	Para iterador = 0 Hasta cantidad_gatos Con Paso gatos_que_alimento_a_la_vez Hacer		
 		escribir "Tiene " cantidad_gatos " gatos";
 		escribir "Comieron " iterador " gatos";
-		escribir "Vamos a alimentar " gatos_que_alimento_a_la_vez " gatos";
-					
+		Si iterador < cantidad_gatos Entonces
+			escribir "Vamos a alimentar " gatos_que_alimento_a_la_vez " gatos"
+		fin si
 	Fin Para
-	
-	
-	
 	
 FinAlgoritmo
