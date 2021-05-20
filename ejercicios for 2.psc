@@ -23,14 +23,14 @@ Algoritmo ejercio_2_for
 	escribir " ";
 	
 	
-	Para iterador = 1 Hasta 5 Con Paso 1 Hacer
+	Para iterador = 1 Hasta CANT_INTENTOS_MAX Con Paso 1 Hacer
 		escribir "ingrese su usuario para iniciar secion:";
 		Leer usuario_ingresado;
 		escribir "ingrese su contraseña para iniciar seción:";
 		Leer contrasenia_ingresada;
 		Si (usuario_ingresado == set_usuario_nuevo) y (contrasenia_ingresada = set_contrasenia )Entonces
 			escribir "Bienvenido!! :) ";
-			iterador = 5;
+			iterador = CANT_INTENTOS_MAX;
 		SiNo
 			escribir "Usuario y/o contraseña ingresados incorrectos :( ";
 			escribir "Intentos restantes: " CANT_INTENTOS_MAX - iterador;
