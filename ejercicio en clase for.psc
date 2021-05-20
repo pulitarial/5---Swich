@@ -15,15 +15,17 @@ Algoritmo ejercicio_en_clase_for
 	
 	escribir MSJ_INICIAL_CANT_GATOS;
 	Leer cantidad_gatos;
+	escribir "Cantidad de gatos alimentadsos"
+	Leer gatos_que_comieron
 	escribir MSJ_CUANTOS_ALIMENTO_A_LA_VEZ
 	Leer  gatos_que_alimento_a_la_vez;
 	
-	Para iterador = 0 Hasta cantidad_gatos Con Paso gatos_que_alimento_a_la_vez Hacer		
-		escribir "Tiene " cantidad_gatos " gatos";
-		escribir "Comieron " iterador " gatos";
+	Para iterador = gatos_que_comieron + 1 Hasta cantidad_gatos Con Paso gatos_que_alimento_a_la_vez Hacer		
 		Si iterador < cantidad_gatos Entonces
 			escribir "Vamos a alimentar " gatos_que_alimento_a_la_vez " gatos"
 		fin si
+		escribir "Tiene " cantidad_gatos " gatos";
+		escribir "Comieron " iterador " gatos";
 	Fin Para
 	
 FinAlgoritmo
