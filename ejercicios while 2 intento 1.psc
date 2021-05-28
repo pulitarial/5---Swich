@@ -65,7 +65,7 @@ Algoritmo ejercicio_2_swich
 	escribir MSJ_INGRESE_SU_COONTRASENIA;
 	leer verifica_contrasenia_usuario_1;
 	
-	Mientras (verifica_usuario_1 != defina_usuario_1) o (verifica_usuario_1 != defina_usuario_2) o (verifica_usuario_1 != defina_contrasenia_usuario_3) hacer
+	Mientras ((verifica_usuario_1 <> defina_usuario_1) o (verifica_usuario_1 <> defina_usuario_2) o (verifica_usuario_1 <> defina_contrasenia_usuario_3) y (verifica_contrasenia_usuario_1  !=defina_contrasenia_usuario_1)) o ((verifica_contrasenia_usuario_1  !=defina_contrasenia_usuario_2) o (verifica_contrasenia_usuario_1  !=defina_contrasenia_usuario_3))
 		escribir "YEEEE";
 		Escribir MSJ_INGRESE_SU_USUARIO;
 		leer verifica_usuario_1;
